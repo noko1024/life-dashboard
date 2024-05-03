@@ -1,0 +1,15 @@
+services:
+  grafana: 
+    image: grafana/grafana-enterprise:latest
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./data/grafana:/var/lib/grafana
+    networks:
+      - internal
+
+    
+
+networks:
+  internal:
+    external: false
